@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include src="src/templates/head.html" locals='{"title": "Home"}'></include>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <include src="src/templates/header.html"></include>
+<div class="first-block">
+      <div class="first-block__center">
+      <form class="form">
+            <h1 class="form__title">Trial Class</h1>
+            <input type="text" class="form-input" title="Name" placeholder="Enter your name">
+            <input type='tel' class="form-input"  title='Phone Number' placeholder="Enter your phone">
+            <select size="1">
+              <option >Chose your class</option>
+              <option value="value1">value1</option>
+              <option value="value2">value2</option>
+              <option value="value3">value3</option>
+              <option value="value4">value4</option>
+            </select>
+            <button type="submit">Try it</button>
+          </form>
+          <div class="text-box">
+          <h1 class="title">just balance<br> your mind & body</h1>
+          <h5 class="subtitle">Create the healthy living for yourself</h5>
+          </div>
+      </div>
+</div>
+  <include src="src/templates/footer.html"></include>
+</body>
+</html>

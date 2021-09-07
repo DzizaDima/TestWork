@@ -1,0 +1,129 @@
+@include font-face("OpenSans-SemiBold", "/fonts/OpenSans-SemiBold", 500);
+@include font-face("OpenSans-Regular", "/fonts/OpenSans-Regular", 500);
+@include font-face("Freestyle-script-regular", "/fonts/Freestyle-Script-Regular", 500);
+.desktop-header{
+  display: flex;
+  padding: 15px 0;
+  .nav{
+    flex: 1 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .nav-list{
+      .list-item{
+        position: relative;
+        padding: 0 15px;
+        color: #656565;
+        text-decoration: none;
+        font-family: 'OpenSans-SemiBold';
+        font-size: 14px;
+        &:hover{
+          color: #5363db;
+          text-decoration: none;
+          &::after{
+            border-bottom: 1px solid #5363db;
+          }
+        }
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          left: calc(50% - 15px);
+          width: 30px;
+          border-bottom: 1px solid transparent;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+    
+  }
+  .first-nav{
+    padding-left:10%;
+  }
+  .second-nav{
+    padding-right:10%;
+  }
+}
+
+
+.first-block{
+  background: url(../img/slider.png) center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#5363db ;
+    opacity: .8;
+  }
+ &__center{
+   position: relative;
+   z-index: 10;
+   display: flex;
+   max-width: 60%;
+   .text-box{
+      margin-left: 85px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title{
+        font-family: 'OpenSans-Regular';
+        text-transform: uppercase;
+        font-size: $font-size-5;
+        font-weight: 900;
+      }
+      .subtitle{
+        font-family: 'Freestyle-script-regular';
+        font-size: 32px;
+        font-weight: 100;
+        letter-spacing: 1px;
+      }
+   }
+   .form{
+    width: clamp(200px,40%,400px);
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    &__title{
+      font-family: 'OpenSans-SemiBold';
+      font-size: $font-size-4;
+      font-weight: 600;
+      color: #5363db;
+      margin-bottom: $offset-2;
+    }
+    input,select{
+      background-color: #f2f2f2;
+      color: #888888;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: $font-size-1;
+    }
+    button{
+      padding: $offset-1 $offset-3;
+      background-color: #5b6ceb;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      width: 65%;
+      margin-left: auto;
+      font-family: 'OpenSans-Regular';
+      transition: all ease-in-out 0.5s;
+      &:hover{
+        background-color: #475bf1;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      }
+    }
+  }
+ }
+}
